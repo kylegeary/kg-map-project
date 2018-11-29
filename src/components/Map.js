@@ -14,7 +14,7 @@ class Map extends React.Component {
 		};
 	}
 	componentDidUpdate(prevProps, prevState) {
-		if (prevProps.google !== this.props.google) {
+		if (prevProps.google !== this.state.currentLocation) {
 			this.loadMap();
 		}
 	}
@@ -44,23 +44,33 @@ class Map extends React.Component {
 			this.map = new maps.Map(node, mapConfig);
 		}
 	}
+	renderChildren() {
+		const { children } = this.props;
+		if (!children) return;
+
+		return React.Children.map(children, c => {
+			return React.cloneElement(c, {
+				map: this.map,
+				google: this.props.google,
+				mapCenter: this.state.currentLocation
+			});
+		});
+	}
 	render() {
 		const style = {
 			width: "100vw",
 			height: "100vh"
 		};
 		return (
-			<div style={style} ref="map">
-				Loading map...
+			<div>
+				<div style={style} ref="map">
+					Loading map...
+				</div>
+				{this.renderChildren()}
 			</div>
 		);
 	}
 }
-Map.propTypes = {
-	google: React.PropTypes.object,
-	zoom: React.PropTypes.number,
-	initialCenter: React.PropTypes.object
-};
 Map.defaultProps = {
 	zoom: 14,
 	// Downtown Kansas City will be the default center for the map (given the amount of bars there)
