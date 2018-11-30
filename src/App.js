@@ -41,7 +41,6 @@ class App extends React.Component {
 				console.error(e);
 			});
 	};
-	// Filter a new array of current places based on user query
 	findBars = search => {
 		if (!search) {
 			this.setState({ barsFound: [] });
