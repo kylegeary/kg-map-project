@@ -10,8 +10,8 @@ This project was built with the following tools:
 * [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial).
 * [Foursquare Places API](https://developer.foursquare.com/places-api).
 
-### Running the app
-* Clone this repo by typing git clone `https://github.com/kylegeary/neighborhood-map.git` in your computer's terminal
+### Running the app 
+Clone this repo by typing `git clone https://github.com/kylegeary/neighborhood-map.git` in your computer's terminal.
 * After cloning the repo, run `npm install`
 * To see the app in action, run `npm start`
 
