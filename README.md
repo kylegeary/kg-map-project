@@ -21,4 +21,4 @@ You can run this app in development mode or production mode.
 * To run in development mode - run `npm start`.
 * To run in production mode - run `npm run build`. This will bundle the app in the `build` folder with optimizations for better performance.
 
-* Note: I am using the default create-react-app service worker in this project. The service worker only works in production mode. You can read about this here -> https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Note: I am using the default create-react-app service worker in this project. The service worker only works in production mode. You can read about this here -> https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
