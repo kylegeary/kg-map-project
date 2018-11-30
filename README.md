@@ -9,6 +9,7 @@ This project was built with the following tools:
 * [Google-Maps-React](https://github.com/fullstackreact/google-maps-react).
 * [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial).
 * [Foursquare Places API](https://developer.foursquare.com/places-api).
+* [Axios](https://www.npmjs.com/package/axios).
 
 ### Running the app 
 Clone this repo by typing `git clone https://github.com/kylegeary/kg-map-project.git` in your computer's terminal.
@@ -19,4 +20,5 @@ Clone this repo by typing `git clone https://github.com/kylegeary/kg-map-project
 You can run this app in development mode or production mode.
 * To run in development mode - run `npm start`.
 * To run in production mode - run `npm run build`. This will bundle the app in the `build` folder with optimizations for better performance.
-* I am using the default create-react-app service worker in this project. The service worker only works in production mode. You can read about this here -> https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+* Note: I am using the default create-react-app service worker in this project. The service worker only works in production mode. You can read about this here -> https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
