@@ -7,8 +7,12 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			bars: []
+			bars: [],
+			barsFound: []
 		};
+	}
+	showSettings(e) {
+		e.preventDefault();
 	}
 	componentDidMount() {
 		this.apiSearch();
@@ -29,18 +33,30 @@ class App extends React.Component {
 			.get(url + new URLSearchParams(parameters))
 			.then(response => {
 				this.setState({
-					bars: response.data.response.groups[0].items
+					bars: response.data.response.groups[0].items,
+					barsFound: response.data.response.groups[0].items
 				});
 			})
 			.catch(e => {
 				console.error(e);
 			});
 	};
+	// Filter a new array of current places based on user query
+	findBars = search => {
+		if (!search) {
+			this.setState({ barsFound: [] });
+		}
+		const foundBars = this.state.bars.filter(bar => bar.venue.name.toLowerCase().includes(search.toLowerCase()));
+		this.setState({ barsFound: foundBars });
+	};
 	render() {
 		return (
-			<React.Fragment>
-				<Container bars={this.state.bars} />
-			</React.Fragment>
+			<main className="App">
+				<header className="top-nav">
+					<h1 className="top-nav__title">KC Dive Bars</h1>
+				</header>
+				<Container bars={this.state.barsFound} findBars={this.findBars} />
+			</main>
 		);
 	}
 }

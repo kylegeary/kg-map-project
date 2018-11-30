@@ -1,44 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Neighborhood Maps
+## What is this?
+This is a React based project which displays the info and locations of certain businesses within a specific neighborhood. In this case, I chose to show the various 'fine-dining' establishments (aka: dive bars) in downtown Kansas City, Mo.
 
-## Available Scripts
+## Resources
+This project was built with the following tools:
+1. [Create React App](https://github.com/facebook/create-react-app).
+2. [React-Burger-Menu](https://github.com/negomi/react-burger-menu).
+3. [Google-Maps-React](https://github.com/fullstackreact/google-maps-react).
+4. [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial).
+5. [Foursquare Places API](https://developer.foursquare.com/places-api).
 
-In the project directory, you can run:
+## Running the app
+• Clone this repo by typing git clone `https://github.com/kylegeary/neighborhood-map.git` in your computer's terminal
+• After cloning the repo, run `npm install`
+• To see the app in action, run `npm start`
 
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## But wait, there's more
+You can run this app in development mode or production mode.
+• To run in development mode - run `npm start`.
+• To run in production mode - run `npm run build`. This will bundle the app in the `build` folder with optimizations for better performance.
+• I am using the default create-react-app service worker in this project. The service worker only works in production mode. You can read about this here -> https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
