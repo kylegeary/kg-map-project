@@ -11,7 +11,7 @@ This project was built with the following tools:
 * [Foursquare Places API](https://developer.foursquare.com/places-api).
 
 ### Running the app 
-Clone this repo by typing `git clone https://github.com/kylegeary/neighborhood-map.git` in your computer's terminal.
+Clone this repo by typing `git clone https://github.com/kylegeary/kg-map-project.git` in your computer's terminal.
 * After cloning the repo, run `npm install`
 * To see the app in action, run `npm start`
 
